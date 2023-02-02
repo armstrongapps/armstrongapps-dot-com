@@ -1,21 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-
-        <link href="css/main.css" rel="stylesheet">
+        <title>Armstrong Apps</title>
     </head>
+
     <body>
+
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
         
-        <header></header>
+        <script>
+            
+            loadHeader();
+            loadContent();
+            loadFooter();
 
-        <main></main>
+            function loadHeader() {
+                fetch("header.html")
+                .then((result) => {return result.text();})
+                .then((content) => {document.getElementById("header").innerHTML = content;});
+            }
+            
+            function loadContent() {
+                fetch("home.html")
+                .then((result) => {return result.text();})
+                .then((content) => {document.getElementById("content").innerHTML = content;});
+            }
 
-        <footer></footer>
+            function loadFooter() {
+                fetch("footer.html")
+                .then((result) => {return result.text();})
+                .then((content) => {document.getElementById("footer").innerHTML = content;});
+            }
 
-        <script src="js/main.js"></script>
+        </script>
     </body>
+
 </html>
