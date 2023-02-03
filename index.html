@@ -62,7 +62,17 @@
                 .then((result) => {return result.text();})
                 .then((content) => {document.getElementsByTagName('meta')["description"].content = content;})
             }
+            
+            renderComponent(fileName, targetElememt);
 
+            // let fileName = "homeContent.html";
+            // let targetElement = "main";
+            function renderComponent(fileName, targetElement) {
+                fetch("meta-description.txt")
+                .then((result) => {return result.text();})
+                .then((content) => {document.getElementsByTagName('meta')["description"].content = content;})
+            }
+            
         </script>
 
     </body>
