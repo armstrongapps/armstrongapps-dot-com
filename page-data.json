@@ -1,8 +1,1 @@
-{
-    "page-title": "Page Title",
-    "meta-description": "Meta Description",
-    "meta-tags": ["Tag A", "Tag B", "Tag C", "Tag D", "Tag E"],
-    "page-h1": "Header1 Element",
-    "featured-image-url": "https://featured.img.com/img",
-    "body-content": "This is the full text content of the HTML."
-}
+{"page-title": "Page Title","meta-description": "Meta Description","meta-tags": ["Tag A", "Tag B", "Tag C", "Tag D", "Tag E"],"page-h1": "Header1 Element","featured-image-url": "https://featured.img.com/img","body-content": "This is the full text content of the HTML."}
