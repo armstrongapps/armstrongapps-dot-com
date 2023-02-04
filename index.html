@@ -79,7 +79,8 @@
             function renderPageContent() {
                 fetch("page-data.json")
                 .then((result) => {return result.text();})
-                .then((content) => {pageData = content;})
+                .then((content) => {
+                    pageData = JSON.parse(pageData).content;})
             }
             
         </script>
