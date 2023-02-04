@@ -29,9 +29,11 @@
 
         <script>
             
-            loadHeader();
-            loadContent();
-            loadFooter();
+            //loadHeader();
+            //loadContent();
+            //loadFooter();
+
+            renderPageContent();
 
             function loadHeader() {
                 fetch("header.html")
@@ -63,7 +65,7 @@
                 .then((content) => {document.getElementsByTagName('meta')["description"].content = content;})
             }
             
-            renderComponent(fileName, targetElememt);
+            //renderComponent(fileName, targetElememt);
 
             // let fileName = "homeContent.html";
             // let targetElement = "main";
@@ -71,6 +73,13 @@
                 fetch("meta-description.txt")
                 .then((result) => {return result.text();})
                 .then((content) => {document.getElementsByTagName('meta')["description"].content = content;})
+            }
+
+            let pageData;
+            function renderPageContent() {
+                fetch("page-data.json")
+                .then((result) => {return result.text();})
+                .then((content) => {pageData = content;})
             }
             
         </script>
